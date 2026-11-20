@@ -1,0 +1,55 @@
+THE PLAYGROUND PRESS | ISSUE 004: DEAD AIR
+QUALITY ASSURANCE REPORT
+Date: 20 November 2026
+
+STATUS
+PASS: Content, puzzle logic, answer key, HTML interactions, and responsive layout checks completed in the tested Chromium environment.
+SCOPE LIMIT: This is a documented local QA pass. It is not a certification of every browser/device combination or of a live Render deployment.
+
+PUZZLE VERIFICATION
+01 - THE SWITCHBOARD IN THE DARK
+- Independently enumerated legal simple paths in the supplied undirected graph.
+- Confirmed the published route is valid, avoids blocked relay G, visits A before C, and uses 10 hops.
+- Confirmed it is the unique shortest legal route.
+- Browser tested valid route acceptance and invalid route rejection.
+- The input uses a clear hyphen-separated route sequence, avoiding the previous cell-click maze interaction problem.
+
+02 - DEAD PIXELS, LIVE SIGNAL
+- Independently checked all row and column clues against the 15x15 answer pattern.
+- Counted valid solutions using row candidate enumeration and column-prefix constraints: exactly one.
+- Browser tested the 225-cell grid, dark/pale/clear click cycle, incomplete/wrong rejection, correct solution acceptance, and Clear All reset.
+- PDF contains the row clues, column clues, and printable 15x15 grid.
+
+03 - THE NIGHT ROSTER
+- Checked the full assignment against all eight clues and one-to-one category constraints.
+- Browser tested incorrect and correct roster submissions.
+- Confirmed the extraction at 22:30 is June; the final operator is Ivo.
+
+04 - THE TAPE MARKED LANTERN
+- Independently decrypted the ciphertext using repeating key LANTERN and A=0 arithmetic.
+- Confirmed plaintext: THE TRANSMITTER IS UNDER THE NORTH STAIR.
+- Browser tested incorrect and correct submissions.
+
+05 - FINAL INQUIRY
+- Checked the intended conclusion against the supplied access, role, roster, route and microphone evidence.
+- Browser tested incorrect suspect rejection and Ivo resolution reveal.
+- Editorial qualification retained: Ivo is the strongest supported explanation, not courtroom-standard proof of every action.
+
+INTERFACE TESTS
+- 18/18 automated browser checks passed in Chromium.
+- Tested route, nonogram, roster, cipher, final suspect selection, hint reveal, in-page navigation, and browser-console/page errors.
+- No browser JavaScript exceptions observed.
+- Desktop viewport tested at 1365x900.
+- Mobile viewport tested at 390x844. Corrected roster table overflow; page now fits viewport width. Nonogram intentionally scrolls inside its own grid wrapper.
+- JavaScript syntax check passed with Node.js.
+
+HTML / PDF PARITY
+- Both editions contain the same five puzzle stages and the same intended solutions.
+- PDF answer key checked against HTML solution data.
+- PDF verified as 8 A4 pages.
+- Printable nonogram grid and clues are present in the PDF.
+
+KNOWN TEST LIMITS
+- Browser automation was performed with Chromium only, not Safari, Firefox, or physical iOS/Android devices.
+- Live Render deployment, hosting headers, and external font loading were not tested.
+- Mystery evidence intentionally supports a strongest inference rather than proving every action beyond doubt.
